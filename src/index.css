@@ -58,6 +58,8 @@ p {
 }
 .logo-desc {
   font-size: 0.6rem;
+  border-bottom: 0.06em solid #03485369;
+  width: fit-content;
 }
 .menu-ul {
   display: flex;
@@ -65,6 +67,7 @@ p {
   gap: 0.3em;
 }
 .menu-list-items {
+  list-style-type: none;
   width: 10em;
   padding: 0.2em;
 }
@@ -80,6 +83,7 @@ p {
   font-size: 0.8rem;
 }
 .heading{
+  margin: 0.3em auto;
   text-align: center;
   font-weight: 300;
   font-size: 1.5rem;
@@ -98,6 +102,9 @@ p {
     flex-direction: row;
     justify-content: space-between;
   }
+.menu-list-items{
+  text-align: center;
+}
   .menu-ul{
     flex-direction: row;
   }

@@ -14,7 +14,7 @@ const Logo = () => {
 const MenuItem = ({ link, text }) => {
   return (
     <>
-      <li className="menu-list-items" style={{listStyleType: "none", fontSize: "0.8rem"}}>
+      <li className="menu-list-items">
         <a href={`${link}`}>{text}</a>
       </li>
     </>
