@@ -29,6 +29,7 @@ const RoomsCard = () => {
             <BookingBtn
               classname={"available-btn"}
               text={"CHECK AVAILABILITY"}
+              link={"tel:+233559082614"}
             />
           </div>
         </div>
