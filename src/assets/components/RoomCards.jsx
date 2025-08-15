@@ -39,32 +39,34 @@ const RoomsCard = () => {
 
   return (
     <>
-      <SubHeading text={"ROOMS AVAILABLE"} textColor={"#033b44"} />
-      <div className="room-cards" id="accommodation">
-        <RoomCard
-          img={room1}
-          heading={"ECONOMY ROOM"}
-          desc={["TV", "fan", "Washroom", "Double-size bed"]}
-          price={200}
-        />
-        <RoomCard
-          img={room2}
-          heading={"ECONOMY ROOM"}
-          desc={["TV", "A/C", "Washroom", "Double-size bed"]}
-          price={250}
-        />
-        <RoomCard
-          img={room3}
-          heading={"EXECUTIVE ROOM"}
-          desc={["TV", "A/C", "Washroom", "Queeb-size bed"]}
-          price={350}
-        />
-        <RoomCard
-          img={room4}
-          heading={"EXECUTIVE ROOM"}
-          desc={["TV", "A/C", "Washroom", "Twin bed"]}
-          price={400}
-        />
+      <div style={{backgroundColor: "#033b44"}}>
+        <SubHeading text={"ROOMS AVAILABLE"} textColor={"#fcfaf7"} />
+        <div className="room-cards" id="accommodation">
+          <RoomCard
+            img={room1}
+            heading={"ECONOMY ROOM"}
+            desc={["TV", "fan", "Washroom", "Double-size bed"]}
+            price={200}
+          />
+          <RoomCard
+            img={room2}
+            heading={"ECONOMY ROOM"}
+            desc={["TV", "A/C", "Washroom", "Double-size bed"]}
+            price={250}
+          />
+          <RoomCard
+            img={room3}
+            heading={"EXECUTIVE ROOM"}
+            desc={["TV", "A/C", "Washroom", "Queeb-size bed"]}
+            price={350}
+          />
+          <RoomCard
+            img={room4}
+            heading={"EXECUTIVE ROOM"}
+            desc={["TV", "A/C", "Washroom", "Twin bed"]}
+            price={400}
+          />
+        </div>
       </div>
     </>
   );
