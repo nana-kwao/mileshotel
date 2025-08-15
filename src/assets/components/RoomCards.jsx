@@ -14,7 +14,7 @@ const RoomsCard = () => {
             <img src={img} alt="room-img" />
           </div>
           <div className="roomcard-details">
-            <h2>{heading}</h2>
+            <h2 >{heading}</h2>
             <ul>
               {desc.map((item, idx) => (
                 <li key={idx}>{item}</li>

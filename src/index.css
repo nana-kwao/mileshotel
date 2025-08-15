@@ -1,5 +1,13 @@
+@font-face {
+  font-family: Ubuntu-Bold;
+  src: url("@fonts/Ubuntu-Bold.ttf");
+}
+@font-face {
+  font-family: Ubuntu-Regular;
+  src: url("@fonts/Ubuntu-Regular.ttf");
+}
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: Ubuntu-Regular, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
   font-synthesis: none;
@@ -14,6 +22,7 @@
   padding: 0;
   box-sizing: border-box;
   color: #033b44;
+  font-family: Ubuntu-Regular;
 }
 a,
 h2,
@@ -86,7 +95,8 @@ li {
   border: 0.1em solid #034953;
   font-size: 0.8rem;
 }
-.heading, .sub-heading {
+.heading,
+.sub-heading {
   margin: 0.3em auto;
   text-align: center;
   font-weight: 300;
@@ -129,8 +139,8 @@ li {
 .available-btn {
   color: #fcfaf7;
 }
-.roomcard-details h2{
-  font-weight: 500;
+.roomcard-details h2 {
+  font-family: Ubuntu-Bold;
   color: #faebd7;
 }
 .roomcard-details ul {
@@ -144,7 +154,7 @@ li {
   justify-content: space-between;
   margin-bottom: 0.7em;
 }
-.roomcard-price p{
+.roomcard-price p {
   font-weight: 600;
 }
 .available-btn {
@@ -155,11 +165,11 @@ li {
   border: 0.05em solid #fcfaf7;
   padding: 0.2em 0.5em;
 }
-.available-btn:hover{
+.available-btn:hover {
   border: 0.2em solid #fcfaf7;
   font-weight: 600;
 }
-.sub-heading{
+.sub-heading {
   margin-top: 1em;
   font-size: 2rem;
 }
