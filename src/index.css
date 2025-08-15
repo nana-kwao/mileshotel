@@ -7,6 +7,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #fcfaf7;
+  scroll-behavior: smooth;
 }
 * {
   margin: 0;
@@ -85,7 +86,7 @@ li {
   border: 0.1em solid #034953;
   font-size: 0.8rem;
 }
-.heading {
+.heading, .sub-heading {
   margin: 0.3em auto;
   text-align: center;
   font-weight: 300;
@@ -111,6 +112,8 @@ li {
 }
 .room-card {
   grid-column: span 1;
+  margin-bottom: 1rem;
+  border-bottom: 0.1em solid #fcfaf7;
 }
 .roomcard-img,
 .roomcard-details,
@@ -126,22 +129,39 @@ li {
 .available-btn {
   color: #fcfaf7;
 }
-.roomcard-details ul{
+.roomcard-details h2{
+  font-weight: 500;
+  color: #faebd7;
+}
+.roomcard-details ul {
   display: flex;
   justify-content: space-between;
   margin: 0.5em 0;
 }
-.roomcard-price{
+.roomcard-price {
+  margin-top: 2rem;
   display: flex;
   justify-content: space-between;
+  margin-bottom: 0.7em;
 }
-.available-btn{
+.roomcard-price p{
+  font-weight: 600;
+}
+.available-btn {
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
-border: 0.05em solid #fcfaf7;
-padding: 0.2em 0.5em;
+  border: 0.05em solid #fcfaf7;
+  padding: 0.2em 0.5em;
+}
+.available-btn:hover{
+  border: 0.2em solid #fcfaf7;
+  font-weight: 600;
+}
+.sub-heading{
+  margin-top: 1em;
+  font-size: 2rem;
 }
 @media screen and (min-width: 768px) {
   .heading {

@@ -3,6 +3,7 @@ import room1 from "@img/room1.jpeg";
 import room2 from "@img/room2.jpeg";
 import room3 from "@img/room3.jpeg";
 import room4 from "@img/room4.jpeg";
+import SubHeading from "./SubHeading";
 
 const RoomsCard = () => {
   const RoomCard = ({ img, heading, desc, price }) => {
@@ -25,7 +26,10 @@ const RoomsCard = () => {
               <p>Price</p>
               <p>${price}/NIGHT</p>
             </div>
-            <BookingBtn classname={"available-btn"} text={"CHECK AVAILABILITY"} />
+            <BookingBtn
+              classname={"available-btn"}
+              text={"CHECK AVAILABILITY"}
+            />
           </div>
         </div>
       </>
@@ -34,7 +38,8 @@ const RoomsCard = () => {
 
   return (
     <>
-      <div className="room-cards">
+      <SubHeading text={"ROOMS AVAILABLE"} textColor={"#033b44"} />
+      <div className="room-cards" id="accommodation">
         <RoomCard
           img={room1}
           heading={"ECONOMY ROOM"}
