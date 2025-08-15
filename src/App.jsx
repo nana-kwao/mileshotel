@@ -1,10 +1,16 @@
 import "./App.css";
+import AddressBar from "./assets/components/AddressBar";
+import BackgroundImg from "./assets/components/BackgroundImg";
+import Heading from "./assets/components/Heading";
+import NarBar from "./assets/components/NavBar";
 
 function App() {
   return <>
   <div>
-    <h1>Miles Hotel</h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores dolorum veritatis aspernatur autem cum nemo.</p>
+    <AddressBar/>
+    <NarBar/>
+    <Heading/>
+    {/* <BackgroundImg/> */}
   </div>
   </>;
 }

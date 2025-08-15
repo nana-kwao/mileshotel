@@ -2,67 +2,106 @@
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #fcfaf7;
 }
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #034953;
+}
+a,
+h2,
+p {
+  text-decoration: none;
+  margin: 0;
+}
+.address-bar,
+.address-email-tel,
+.nav-bar {
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
 }
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.address-bar {
+  border-bottom: 0.06em solid #03485369;
 }
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+.address-bar,
+.nav-bar {
+  margin: 0 auto;
+  width: 98%;
+  justify-content: space-between;
+  padding: 0.3rem;
+}
+.nav-bar {
+  flex-direction: column;
+  gap: 0.5em;
+}
+.address-item {
+  display: flex;
+  flex-direction: row;
+  padding: 0.2em;
+}
+.address-item a {
+  font-size: 0.7rem;
+}
+.logo-area {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2em;
   cursor: pointer;
-  transition: border-color 0.25s;
 }
-button:hover {
-  border-color: #646cff;
+.logo-name {
+  color: #eb8006;
 }
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+.logo-desc {
+  font-size: 0.6rem;
 }
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+.menu-ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3em;
+}
+.menu-list-items {
+  width: 10em;
+  padding: 0.2em;
+}
+.menu-list-items:hover,
+.book-now-btn:hover,
+.address-item a:hover {
+  background-color: #faebd7;
+  font-weight: 600;
+}
+.book-now-btn {
+  padding: 0.5em 1em;
+  border: 0.1em solid #034953;
+  font-size: 0.8rem;
+}
+.heading{
+  text-align: center;
+  font-weight: 300;
+  font-size: 1.5rem;
+}
+@media screen and (min-width: 768px) {
+  .heading{
+    font-size: 3.2rem;
   }
-  a:hover {
-    color: #747bff;
+}
+@media screen and (min-width: 961px) {
+  .address-bar, .nav-bar{
+    width: 100%;
   }
-  button {
-    background-color: #f9f9f9;
+  .nav-bar{
+    padding: 1em;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .menu-ul{
+    flex-direction: row;
+  }
+  .heading{
+    font-size: 4.5rem; 
   }
 }
