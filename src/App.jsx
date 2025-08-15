@@ -3,6 +3,7 @@ import AddressBar from "./assets/components/AddressBar";
 import BackgroundImg from "./assets/components/BackgroundImg";
 import Heading from "./assets/components/Heading";
 import NarBar from "./assets/components/NavBar";
+import RoomsCard from "./assets/components/RoomCards";
 
 function App() {
   return <>
@@ -10,7 +11,8 @@ function App() {
     <AddressBar/>
     <NarBar/>
     <Heading/>
-    {/* <BackgroundImg/> */}
+    <BackgroundImg/>
+    <RoomsCard/>
   </div>
   </>;
 }
