@@ -94,6 +94,7 @@ li {
   padding: 0.5em 1em;
   border: 0.1em solid #034953;
   font-size: 0.8rem;
+  width: fit-content;
 }
 .heading,
 .sub-heading {
