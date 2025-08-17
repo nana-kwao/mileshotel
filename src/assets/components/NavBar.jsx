@@ -43,10 +43,10 @@ const MenuItems = ({ refs }) => {
       </li>
       <li className="menu-list-items">
         <a
-          href="/experiences"
-          onClick={handleNav("/experiences", refs.experiencesRef)}
+          href="/facilities"
+          onClick={handleNav("/facilities", refs.facilitiesRef)}
         >
-          EXPERIENCES
+          FACILITIES
         </a>
       </li>
       <li className="menu-list-items">

@@ -7,11 +7,14 @@ import Gallery from "./assets/components/Gallery";
 import Heading from "./assets/components/Heading";
 import NarBar from "./assets/components/NavBar";
 import RoomsCard from "./assets/components/RoomCards";
+import Facilities from "./assets/components/FacilityGrid";
+import Events from "./assets/components/EventCard";
+import About from "./assets/components/About";
 
 function AppContent() {
   const offersRef = useRef(null);
   const accommodationRef = useRef(null);
-  const experiencesRef = useRef(null);
+  const facilitiesRef = useRef(null);
   const eventsRef = useRef(null);
   const aboutRef = useRef(null);
   const homeRef = useRef(null);
@@ -25,7 +28,7 @@ function AppContent() {
       "": homeRef,
       offers: offersRef,
       accommodation: accommodationRef,
-      experiences: experiencesRef,
+      facilities: facilitiesRef,
       events: eventsRef,
       about: aboutRef,
     };
@@ -43,7 +46,7 @@ function AppContent() {
           homeRef,
           offersRef,
           accommodationRef,
-          experiencesRef,
+          facilitiesRef,
           eventsRef,
           aboutRef,
         }}
@@ -58,14 +61,14 @@ function AppContent() {
       <div ref={accommodationRef}>
         <RoomsCard />
       </div>
-      <div ref={experiencesRef} style={{ minHeight: "40vh", padding: "2em 0" }}>
-        <h2 className="sub-heading">Experiences Page</h2>
+      <div ref={facilitiesRef}>
+        <Facilities/>
       </div>
-      <div ref={eventsRef} style={{ minHeight: "40vh", padding: "2em 0" }}>
-        <h2 className="sub-heading">Events Page</h2>
+      <div ref={eventsRef}>
+        <Events/>
       </div>
-      <div ref={aboutRef} style={{ minHeight: "40vh", padding: "2em 0" }}>
-        <h2 className="sub-heading">About Page</h2>
+      <div ref={aboutRef}>
+       <About/> 
       </div>
     </>
   );
