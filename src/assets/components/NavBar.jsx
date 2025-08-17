@@ -29,20 +29,14 @@ const MenuItems = ({ refs }) => {
         </a>
       </li>
       <li className="menu-list-items">
-        <a
-          href="/offers"
-          onClick={handleNav("/mileshotel/offers", refs.offersRef)}
-        >
+        <a href="/offers" onClick={handleNav("/offers", refs.offersRef)}>
           OFFERS
         </a>
       </li>
       <li className="menu-list-items">
         <a
           href="/accommodation"
-          onClick={handleNav(
-            "/mileshotel/accommodation",
-            refs.accommodationRef
-          )}
+          onClick={handleNav("/accommodation", refs.accommodationRef)}
         >
           ACCOMMODATION
         </a>
@@ -50,24 +44,18 @@ const MenuItems = ({ refs }) => {
       <li className="menu-list-items">
         <a
           href="/facilities"
-          onClick={handleNav("/mileshotel/facilities", refs.facilitiesRef)}
+          onClick={handleNav("/facilities", refs.facilitiesRef)}
         >
           FACILITIES
         </a>
       </li>
       <li className="menu-list-items">
-        <a
-          href="/events"
-          onClick={handleNav("/mileshotel/events", refs.eventsRef)}
-        >
+        <a href="/events" onClick={handleNav("/events", refs.eventsRef)}>
           EVENTS
         </a>
       </li>
       <li className="menu-list-items">
-        <a
-          href="/about"
-          onClick={handleNav("/mileshotel/about", refs.aboutRef)}
-        >
+        <a href="/about" onClick={handleNav("/about", refs.aboutRef)}>
           ABOUT
         </a>
       </li>

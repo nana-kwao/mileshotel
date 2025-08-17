@@ -23,7 +23,8 @@ function AppContent() {
 
   // Scroll to section on route change
   useEffect(() => {
-    const path = location.pathname.replace("/", "");
+    // Get the first path segment after "/"
+    const path = location.pathname.split("/")[1] || "";
     const refs = {
       "": homeRef,
       offers: offersRef,
@@ -62,13 +63,13 @@ function AppContent() {
         <RoomsCard />
       </div>
       <div ref={facilitiesRef}>
-        <Facilities/>
+        <Facilities />
       </div>
       <div ref={eventsRef}>
-        <Events/>
+        <Events />
       </div>
       <div ref={aboutRef}>
-       <About/> 
+        <About />
       </div>
     </>
   );
@@ -76,7 +77,7 @@ function AppContent() {
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/mileshotel">
       <AppContent />
     </BrowserRouter>
   );
