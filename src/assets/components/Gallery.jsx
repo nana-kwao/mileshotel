@@ -20,7 +20,7 @@ const Gallery = () => {
           </p>
         </div>
       </>
-    );
+    );                                  
   };
 
   const GalleryGrid = () => {

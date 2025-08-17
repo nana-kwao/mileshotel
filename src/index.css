@@ -175,6 +175,9 @@ li {
   margin-top: 1em;
   font-size: 2.5rem;
 }
+.gallery-details p{
+  padding: 0 0.63em;
+}
 @media screen and (min-width: 768px) {
   .heading {
     font-size: 3.2rem;

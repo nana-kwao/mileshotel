@@ -1,67 +1,78 @@
 import BookingBtn from "./BookingButton";
+import { useNavigate, useLocation } from "react-router-dom";
 
-const Logo = () => {
-  return (
-    <>
-      <div className="logo-area">
-        <h2 className="logo-name">miles</h2>
-        <p className="logo-desc">sleep to your satisfaction</p>
-      </div>
-    </>
-  );
-};
+const Logo = () => (
+  <div className="logo-area">
+    <h2 className="logo-name">miles</h2>
+    <p className="logo-desc">sleep to your satisfaction</p>
+  </div>
+);
 
-const MenuItem = ({ link, text }) => {
+const MenuItems = ({ refs }) => {
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const handleNav = (path, ref) => (e) => {
+    e.preventDefault();
+    if (location.pathname !== path) {
+      navigate(path);
+    } else if (ref && ref.current) {
+      ref.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
-    <>
+    <ul className="menu-ul">
       <li className="menu-list-items">
-        <a href={`${link}`}>{text}</a>
+        <a href="/" onClick={handleNav("/", refs.homeRef)}>
+          HOME
+        </a>
       </li>
-    </>
+      <li className="menu-list-items">
+        <a href="/offers" onClick={handleNav("/offers", refs.offersRef)}>
+          OFFERS
+        </a>
+      </li>
+      <li className="menu-list-items">
+        <a
+          href="/accommodation"
+          onClick={handleNav("/accommodation", refs.accommodationRef)}
+        >
+          ACCOMMODATION
+        </a>
+      </li>
+      <li className="menu-list-items">
+        <a
+          href="/experiences"
+          onClick={handleNav("/experiences", refs.experiencesRef)}
+        >
+          EXPERIENCES
+        </a>
+      </li>
+      <li className="menu-list-items">
+        <a href="/events" onClick={handleNav("/events", refs.eventsRef)}>
+          EVENTS
+        </a>
+      </li>
+      <li className="menu-list-items">
+        <a href="/about" onClick={handleNav("/about", refs.aboutRef)}>
+          ABOUT
+        </a>
+      </li>
+    </ul>
   );
 };
 
-const MenuItems = () => {
-  return (
-    <>
-      <ul className="menu-ul">
-        <MenuItem text={"OFFERS"} link={"#offers"} />
-        <MenuItem text={"ACCOMMODATION"} link={"#accommodation"} />
-        <MenuItem text={"EXPERIENCES"} link={"#experiences"} />
-        <MenuItem text={"EVENTS"} link={"#events"} />
-        <MenuItem text={"ABOUT"} link={"#about"} />
-      </ul>
-    </>
-  );
-};
+const BookNowBtn = () => (
+  <BookingBtn classname={"book-now-btn"} link="#booknow" text={"BOOK NOW"} />
+);
 
-const BookNowBtn = () => {
-  return (
-    <>
-      <BookingBtn
-        classname={"book-now-btn"}
-        link={"#booknow"}
-        text={"BOOK NOW"}
-      />
-    </>
-  );
-};
+const NarBar = ({ refs }) => (
+  <div className="nav-bar">
+    <Logo />
+    <MenuItems refs={refs} />
+    <BookNowBtn />
+  </div>
+);
 
-const NarBar = () => {
-  return (
-    <>
-      <div className="nav-bar">
-        <div>
-          <Logo />
-        </div>
-        <div>
-          <MenuItems />
-        </div>
-        <div>
-          <BookNowBtn />
-        </div>
-      </div>
-    </>
-  );
-};
 export default NarBar;
