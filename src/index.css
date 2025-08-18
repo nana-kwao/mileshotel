@@ -570,15 +570,11 @@ input:focus {
 }
 .socials-links{
   display: flex;
+  gap: 1em;
 }
 .footer-socials img{
   width: 2rem;
   height: 2rem;
-}
-@media screen and (min-width: 560px) {
-  .socials-links{
-    gap: 1rem;
-  }
 }
 .license-area{
   margin: 1em 0;
