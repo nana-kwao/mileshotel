@@ -26,10 +26,10 @@ const Gallery = () => {
   const GalleryGrid = () => {
     return (
       <>
-        <img src={fac3} alt="gallery-img" className="gallery-grid-item item1"/>
-        <img src={fac1} alt="gallery-img" className="gallery-grid-item item2"/>
-        <img src={fac2} alt="gallery-img" className="gallery-grid-item item3"/>
-        <img src={fac4} alt="gallery-img" className="gallery-grid-item item4"/>
+        <img src={fac3} alt="gallery-img" className="gallery-grid-item gal-item1"/>
+        <img src={fac1} alt="gallery-img" className="gallery-grid-item gal-item2"/>
+        <img src={fac2} alt="gallery-img" className="gallery-grid-item gal-item3"/>
+        <img src={fac4} alt="gallery-img" className="gallery-grid-item gal-item4"/>
       </>
     );
   };

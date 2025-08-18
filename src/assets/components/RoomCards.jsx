@@ -14,7 +14,7 @@ const RoomsCard = () => {
             <img src={img} alt="room-img" />
           </div>
           <div className="roomcard-details">
-            <h2 >{heading}</h2>
+            <h2>{heading}</h2>
             <ul>
               {desc.map((item, idx) => (
                 <li key={idx}>{item}</li>
@@ -36,36 +36,47 @@ const RoomsCard = () => {
       </>
     );
   };
+  const rooms = [
+    {
+      img: room1,
+      heading: "ECONOMY ROOM",
+      desc: ["TV", "fan", "Washroom", "Double-size bed"],
+      price: 200,
+    },
+    {
+      img: room2,
+      heading: "ECONOMY ROOM",
+      desc: ["TV", "A/C", "Washroom", "Double-size bed"],
+      price: 200,
+    },
+    {
+      img: room3,
+      heading: "EXECUTIVE ROOM",
+      desc: ["TV", "A/C", "Fridge", "Washroom", "Queen-size bed"],
+      price: 200,
+    },
+    {
+      img: room4,
+      heading: "EXECUTIVE ROOM",
+      desc: ["TV", "A/C", "Fridge", "Washroom", "Twin bed"],
+      price: 200,
+    },
+  ];
 
   return (
     <>
-      <div style={{backgroundColor: "#033b44"}}>
+      <div style={{ backgroundColor: "#033b44" }}>
         <SubHeading text={"ROOMS AVAILABLE"} textColor={"#fcfaf7"} />
         <div className="room-cards" id="accommodation">
-          <RoomCard
-            img={room1}
-            heading={"ECONOMY ROOM"}
-            desc={["TV", "fan", "Washroom", "Double-size bed"]}
-            price={200}
-          />
-          <RoomCard
-            img={room2}
-            heading={"ECONOMY ROOM"}
-            desc={["TV", "A/C", "Washroom", "Double-size bed"]}
-            price={250}
-          />
-          <RoomCard
-            img={room3}
-            heading={"EXECUTIVE ROOM"}
-            desc={["TV", "A/C", "Washroom", "Queeb-size bed"]}
-            price={350}
-          />
-          <RoomCard
-            img={room4}
-            heading={"EXECUTIVE ROOM"}
-            desc={["TV", "A/C", "Washroom", "Twin bed"]}
-            price={400}
-          />
+          {rooms.map((item, idx) => (
+            <RoomCard
+              key={idx}
+              img={item.img}
+              heading={item.heading}
+              desc={item.desc}
+              price={item.price}
+            />
+          ))}
         </div>
       </div>
     </>
