@@ -1,7 +1,7 @@
-const BookingBtn = ({ link, classname, text }) => {
+const BookingBtn = ({ classname, text }) => {
   return (
     <>
-      <button href={`${link}`}  className={classname}>{text}</button>
+      <button className={classname}>{text}</button>
     </>
   );
 };

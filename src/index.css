@@ -482,3 +482,63 @@ li {
     grid-template-rows: 400px;
   }
 }
+
+/*footer*/
+.footer {
+  background-color: #033b44;
+}
+label {
+  display: flex;
+  justify-content: space-between;
+  color: #fcfaf7;
+  height: 2em;
+  margin: 1em 0;
+  gap: 1em;
+}
+.booknow {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#bookingForm {
+  padding: 0 0.4em;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.form-selection {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+input,
+select {
+  background-color: #fcfaf7;
+  color: #033b44;
+  font-family: Ubuntu-Bold;
+  border: 0.1em solid #033b44;
+  padding: 0.5em;
+}
+input:focus {
+  outline: none;
+}
+#bookingForm button{
+  padding: 1em;
+  background-color: #fcfaf7;
+  font-size: 0.7em;
+  border: 0.3em solid #033b44;
+  color: #033b44;
+  border-radius: 0.4em;
+}
+#bookingForm button[type="submit"]{
+  margin: 1em 0;
+  background-color: #033b44;
+  font-size: 1em;
+  border: 0.3em solid #fcfaf7;
+  color: #fcfaf7;
+}
+#bookingForm button[type="submit"]:hover{
+  background-color: #007183;
+  font-family: Ubuntu-Bold;
+}
+

@@ -59,19 +59,19 @@ const MenuItems = ({ refs }) => {
           CONTACT US
         </a>
       </li>
+      <li className="menu-list-items">
+        <a href="/footer" onClick={handleNav("/footer", refs.footerRef)}>
+          <BookingBtn classname={"book-now-btn"} text={"BOOK NOW"} />
+        </a>
+      </li>
     </ul>
   );
 };
-
-const BookNowBtn = () => (
-  <BookingBtn classname={"book-now-btn"} link="#booknow" text={"BOOK NOW"} />
-);
 
 const NarBar = ({ refs }) => (
   <div className="nav-bar">
     <Logo />
     <MenuItems refs={refs} />
-    <BookNowBtn />
   </div>
 );
 

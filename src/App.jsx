@@ -10,6 +10,7 @@ import RoomsCard from "./assets/components/RoomCards";
 import Facilities from "./assets/components/FacilityGrid";
 import Events from "./assets/components/EventCard";
 import Contact from "./assets/components/Contact";
+import Footer from "./assets/components/FooterBar";
 
 function AppContent() {
   const offersRef = useRef(null);
@@ -18,6 +19,7 @@ function AppContent() {
   const eventsRef = useRef(null);
   const contactRef = useRef(null);
   const homeRef = useRef(null);
+  const footerRef = useRef(null)
 
   const location = useLocation();
 
@@ -32,6 +34,7 @@ function AppContent() {
       facilities: facilitiesRef,
       events: eventsRef,
       contact: contactRef,
+      footer: footerRef,
     };
     const ref = refs[path];
     if (ref && ref.current) {
@@ -50,6 +53,7 @@ function AppContent() {
           facilitiesRef,
           eventsRef,
           contactRef,
+          footerRef
         }}
       />
       <div ref={homeRef}>
@@ -70,6 +74,9 @@ function AppContent() {
       </div>
       <div ref={contactRef}>
         <Contact/>
+      </div>
+      <div ref={footerRef}>
+        <Footer/>
       </div>
     </>
   );

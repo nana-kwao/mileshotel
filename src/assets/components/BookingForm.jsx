@@ -1,4 +1,5 @@
 import { useRef, useState } from "react";
+import SubHeading from "./SubHeading";
 
 const BookingForm = () => {
   const roomFormRef = useRef(null);
@@ -6,7 +7,7 @@ const BookingForm = () => {
 
   const RoomForm = ({ index }) => {
     return (
-      <li>
+      <li className="form-selection">
         <label htmlFor={`roomType-${index}`}>
           Room Type{" "}
           <select name={`roomType-${index}`} id={`roomType-${index}`} required>
@@ -58,11 +59,11 @@ const BookingForm = () => {
 
   return (
     <>
-      <div id="booknow">
+      <div className="booknow">
+        <div>
+          <SubHeading text={"MAKE A BOOKING"} textColor={"#fcfaf7"} />
+        </div>
         <form id="bookingForm">
-          <div>
-            <h2>ENTER BOOKING DETAILS</h2>
-          </div>
           <label htmlFor="customerName">
             Customer:{" "}
             <input type="text" name="customerName" id="customerName" required />
@@ -86,6 +87,7 @@ const BookingForm = () => {
               Add New Room
             </button>
           </div>
+          <button type="submit">Confirm</button>
         </form>
       </div>
     </>
