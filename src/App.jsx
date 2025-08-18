@@ -9,14 +9,14 @@ import NarBar from "./assets/components/NavBar";
 import RoomsCard from "./assets/components/RoomCards";
 import Facilities from "./assets/components/FacilityGrid";
 import Events from "./assets/components/EventCard";
-import About from "./assets/components/About";
+import Contact from "./assets/components/Contact";
 
 function AppContent() {
   const offersRef = useRef(null);
   const accommodationRef = useRef(null);
   const facilitiesRef = useRef(null);
   const eventsRef = useRef(null);
-  const aboutRef = useRef(null);
+  const contactRef = useRef(null);
   const homeRef = useRef(null);
 
   const location = useLocation();
@@ -31,7 +31,7 @@ function AppContent() {
       accommodation: accommodationRef,
       facilities: facilitiesRef,
       events: eventsRef,
-      about: aboutRef,
+      contact: contactRef,
     };
     const ref = refs[path];
     if (ref && ref.current) {
@@ -49,7 +49,7 @@ function AppContent() {
           accommodationRef,
           facilitiesRef,
           eventsRef,
-          aboutRef,
+          contactRef,
         }}
       />
       <div ref={homeRef}>
@@ -68,8 +68,8 @@ function AppContent() {
       <div ref={eventsRef}>
         <Events />
       </div>
-      <div ref={aboutRef}>
-        <About />
+      <div ref={contactRef}>
+        <Contact/>
       </div>
     </>
   );

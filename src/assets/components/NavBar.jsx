@@ -55,8 +55,8 @@ const MenuItems = ({ refs }) => {
         </a>
       </li>
       <li className="menu-list-items">
-        <a href="/about" onClick={handleNav("/about", refs.aboutRef)}>
-          ABOUT
+        <a href="/contact" onClick={handleNav("/contact", refs.contactRef)}>
+          CONTACT US
         </a>
       </li>
     </ul>

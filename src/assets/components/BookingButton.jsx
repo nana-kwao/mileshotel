@@ -1,7 +1,7 @@
 const BookingBtn = ({ link, classname, text }) => {
   return (
     <>
-      <a href={`${link}`}  className={classname}>{text}</a>
+      <button href={`${link}`}  className={classname}>{text}</button>
     </>
   );
 };
