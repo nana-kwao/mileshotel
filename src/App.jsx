@@ -2,9 +2,7 @@ import { useRef, useEffect } from "react";
 import { useLocation, BrowserRouter } from "react-router-dom";
 import "./App.css";
 import AddressBar from "./assets/components/AddressBar";
-import BackgroundImg from "./assets/components/BackgroundImg";
 import Gallery from "./assets/components/Gallery";
-import Heading from "./assets/components/Heading";
 import NarBar from "./assets/components/NavBar";
 import RoomsCard from "./assets/components/RoomCards";
 import Facilities from "./assets/components/FacilityGrid";
@@ -44,7 +42,9 @@ function AppContent() {
 
   return (
     <>
-      <AddressBar />
+      <div ref={homeRef}>
+        <AddressBar />
+      </div>
       <NarBar
         refs={{
           homeRef,
@@ -53,13 +53,9 @@ function AppContent() {
           facilitiesRef,
           eventsRef,
           contactRef,
-          footerRef
+          footerRef,
         }}
       />
-      <div ref={homeRef}>
-        <Heading />
-        <BackgroundImg />
-      </div>
       <div ref={offersRef}>
         <Gallery />
       </div>
@@ -73,11 +69,12 @@ function AppContent() {
         <Events />
       </div>
       <div ref={contactRef}>
-        <Contact/>
+        <Contact />
       </div>
       <div ref={footerRef}>
-        <Footer/>
+        <Footer />
       </div>
+      
     </>
   );
 }

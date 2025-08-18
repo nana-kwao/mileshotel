@@ -124,14 +124,26 @@ li {
     margin: 0 1em;
   }
 }
-
+/* Arrow Up*/
+.arrowup {
+  position: fixed;
+  width: fit-content;
+  height: fit-content;
+  bottom: 2rem;
+  right: 1rem;
+}
+.arrowup img {
+  width: 2.5rem;
+  height: 2rem;
+  background-color: #fcfaf7;
+}
 /* Buttons */
 .book-now-btn {
   padding: 0.5em 1em;
   border: 0.1em solid #034953;
   font-size: 0.8rem;
-  width: fit-content;
-  height: fit-content;
+  width: 100%;
+  height: 100%;
   background-color: transparent;
 }
 .available-btn {
@@ -443,16 +455,22 @@ li {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 250px;
+  padding-top: 1em;
 }
 .contact-item1,
 .contact-item2,
-.map-area,
-.map-area iframe {
+.map-area {
   width: 100%;
   height: 100%;
 }
+.map-area h1 {
+  height: auto;
+  margin: 0 auto;
+}
 .map-area iframe {
   border: none;
+  height: 85%;
+  width: 100%;
 }
 .contact-card {
   display: flex;
@@ -522,7 +540,7 @@ select {
 input:focus {
   outline: none;
 }
-#bookingForm button{
+#bookingForm button {
   padding: 1em;
   background-color: #fcfaf7;
   font-size: 0.7em;
@@ -530,15 +548,54 @@ input:focus {
   color: #033b44;
   border-radius: 0.4em;
 }
-#bookingForm button[type="submit"]{
+#bookingForm button[type="submit"] {
   margin: 1em 0;
   background-color: #033b44;
   font-size: 1em;
   border: 0.3em solid #fcfaf7;
   color: #fcfaf7;
 }
-#bookingForm button[type="submit"]:hover{
+#bookingForm button[type="submit"]:hover {
   background-color: #007183;
   font-family: Ubuntu-Bold;
 }
-
+.footer-socials{
+  display: flex;
+  justify-content: space-between;
+  padding: 3rem 1rem;
+  padding-right: 2rem;
+  width: 100%;
+  height:10rem;
+  background-color: #fcfaf7;
+}
+.socials-links{
+  display: flex;
+}
+.footer-socials img{
+  width: 2rem;
+  height: 2rem;
+}
+@media screen and (min-width: 560px) {
+  .socials-links{
+    gap: 1rem;
+  }
+}
+.license-area{
+  margin: 1em 0;
+}
+.copyright{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.copyright p{
+  border-top: 0.1em solid #033b44;
+  font-size: 0.7em;
+  padding-top: 0.5em;
+}
+.attribution{
+  text-decoration: underline;
+  color: blue;
+  margin: 0 1em;
+}
